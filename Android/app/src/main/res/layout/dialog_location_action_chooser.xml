@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutImageWrapper">
+
+        <de.thmgames.s3.Views.Widgets.LoadingImageView
+            android:id="@+id/locationImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:id="@+id/curEnergyValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="100sp"
+            android:textStyle="bold"
+            android:layout_above="@+id/toolbarWrapper"
+            android:paddingBottom="@dimen/keyline_1_minus_8dp"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@id/toolbarWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:alpha="0.8"
+            android:background="@drawable/tabbackground"
+            android:minHeight="?attr/actionBarSize">
+
+            <TextView
+                android:id="@+id/locationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:ellipsize="end"
+                android:fontFamily="@string/font_fontFamily_medium"
+                android:lineSpacingMultiplier="1.1"
+                android:maxLines="2"
+                android:paddingEnd="@dimen/keyline_1"
+                android:paddingStart="@dimen/keyline_2_minus_16dp"
+                android:paddingTop="@dimen/keyline_1_minus_8dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/body_text_1_inverse"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                android:id="@+id/attackValueBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                app:dsb_allowTrackClickToDrag="false"
+                app:dsb_indicatorColor="@color/accent"/>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttonWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/tabbackground">
+
+        <Button
+            android:id="@+id/secondbutton"
+            style="@style/Widget.S3.Button.Borderless.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/keyline_1"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/mainbutton"
+            style="@style/Widget.S3.Button.Borderless.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="@dimen/keyline_1"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

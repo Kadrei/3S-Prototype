@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">@color/md_blue_800</color>
+
+    <!-- colorPrimaryDark is used for the status bar -->
+    <color name="primaryDark">@color/md_blue_900</color>
+
+    <!-- colorAccent is used as the default value for colorControlActivated
+         which is used to tint widgets -->
+    <color name="accent">@color/md_blue_A700</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="light_grey">#F0F0F0</color>
+    <color name="grey">#D0D0D0</color>
+    <color name="list_item_title">@color/accent</color>
+    <color name="counter_text_color">@color/accent</color>
+    <color name="list_background">@color/white</color>
+    <color name="list_background_pressed">@color/light_grey</color>
+    <color name="counter_text_bg">@color/md_blue_900</color>
+    <color name="list_divider">@color/black</color>
+    <color name="snackbar_background">#ff323232</color>
+    <color name="snackbar_text">#ffffffff</color>
+    <color name="snackbar_action_text">#ff00ff00</color>
+    <color name="bluetooth">#287AA9</color>
+
+    <color name="body_text_1_inverse">#deffffff</color>
+    <color name="body_text_2_inverse">#8affffff</color>
+</resources>

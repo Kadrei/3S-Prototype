@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_non_user_error">Dieser Fehler sollte nicht passieren. Wir arbeiten bereits dran.</string>
+    <string name="account_already_linked_208">Dieser Account wurde bereits verknüpft.</string>
+    <string name="cache_miss_120">Wir konnten leider keine Daten im Cache finden.</string>
+    <string name="command_unavailable_108">Diese Funktion ist nur für Tester freigeschaltet.</string>
+    <string name="connection_failed_100">Verbindung fehlgeschlagen.</string>
+    <string name="email_missing_204">Die E-Mail Adresse fehlt.</string>
+    <string name="duplicate_value_137">@string/default_non_user_error</string>
+    <string name="email_not_found_205">Die E-Mail Adresse wurde nicht gefunden.</string>
+    <string name="email_taken_203">Diese E-Mail Adresse wird bereits verwendet.</string>
+    <string name="exceeded_quota_140">@string/default_non_user_error</string>
+    <string name="file_delete_error_153">Die Datei konnte leider nicht gelöscht werden.</string>
+    <string name="incorrect_type_111">@string/default_non_user_error</string>
+    <string name="internal_server_error_1">@string/default_non_user_error</string>
+    <string name="invalid_acl_123">Du hast keine Rechte um das zu tun.</string>
+    <string name="invalid_channel_name_112">@string/default_non_user_error</string>
+    <string name="invalid_class_name_103">@string/default_non_user_error</string>
+    <string name="invalid_email_adress_125">Diese E-Mail Adresse ist ungültig.</string>
+    <string name="invalid_event_name_160">@string/default_non_user_error</string>
+    <string name="invalid_file_name_122">Dieser Dateiname ist ungültig.</string>
+    <string name="invalid_json_107">@string/default_non_user_error</string>
+    <string name="invalid_key_name_105">@string/default_non_user_error</string>
+    <string name="invalid_linked_session_251">Die Verknüpfung ist leider ungültig.</string>
+    <string name="invalid_nested_key_121">@string/default_non_user_error</string>
+    <string name="invalid_pointer_106">@string/default_non_user_error</string>
+    <string name="invalid_query_102">@string/default_non_user_error</string>
+    <string name="invalid_role_name_139">@string/default_non_user_error</string>
+    <string name="linked_id_missing_250">Leider konnten die Accounts nicht verknüpft werden.</string>
+    <string name="missing_object_id_104">@string/default_non_user_error</string>
+    <string name="must_create_user_through_signup_207">Bitte registriere dich über das Registrierungsformular.</string>
+    <string name="not_initialized_109">@string/default_non_user_error</string>
+    <string name="object_not_found_101">@string/default_non_user_error</string>
+    <string name="object_too_large_116">Leider sind die zu ladenden Daten zu groß.</string>
+    <string name="operation_forbidden_119">Diese Funktinalität ist nicht aktiviert.</string>
+    <string name="other_cause_1">Ein Unbekannter Fehler ist aufgetreten.</string>
+    <string name="password_missing_201">Das Passwort fehlt.</string>
+    <string name="push_misconfigured_115">@string/default_non_user_error</string>
+    <string name="script_error_141">@string/default_non_user_error</string>
+    <string name="session_missing_206">Logge dich bitte erneut ein.</string>
+    <string name="timeout_124">Der Server braucht momentan zu lang zum Antworten.</string>
+    <string name="unsupported_service_252">Der verlinkte Service wird nicht unterstützt.</string>
+    <string name="username_missing_200">Der Username fehlt.</string>
+    <string name="username_taken_202">Der Username ist bereits vergeben.</string>
+    <string name="validation_error_142">Die Daten sind leider falsch!</string>
+</resources>

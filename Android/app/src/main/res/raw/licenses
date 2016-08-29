@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<notices>
+<notice>
+    <name>MPAndroidChart</name>
+    <url>https://github.com/PhilJay/MPAndroidChart</url>
+    <copyright>Copyright 2015 Philipp Jahoda</copyright>
+    <license>Apache Software License 2.0</license>
+</notice>
+<notice>
+    <name>Galgo</name>
+    <url>https://github.com/inaka/galgo</url>
+    <copyright>Copyright 2014</copyright>
+    <license>Apache Software License 2.0</license>
+</notice>
+<notice>
+    <name>MaterialEditText</name>
+    <url>https://github.com/rengwuxian/MaterialEditText</url>
+    <copyright>Copyright 2014 rengwuxian</copyright>
+    <license>Apache Software License 2.0</license>
+</notice>
+<notice>
+    <name>Android Beacon Library</name>
+    <url>https://github.com/AltBeacon/android-beacon-library</url>
+    <license>Apache Software License 2.0</license>
+</notice>
+<notice>
+    <name>Otto</name>
+    <url>https://github.com/square/otto</url>
+    <copyright>Copyright 2012 Square, Inc. \n Copyright 2010 Google, Inc.</copyright>
+    <license>Apache Software License 2.0</license>
+</notice>
+<notice>
+    <name>Android PagerSlidingTabStrip</name>
+    <url>https://github.com/astuetz/PagerSlidingTabStrip</url>
+    <copyright>Copyright 2013 Andreas Stuetz</copyright>
+    <license>Apache Software License 2.0</license>
+</notice>
+<notice>
+    <name>Picasso</name>
+    <url>https://github.com/square/picasso</url>
+    <copyright>Copyright 2013 Square, Inc.</copyright>
+    <license>Apache Software License 2.0</license>
+</notice>
+<notice>
+    <name>CircularImageView</name>
+    <url>https://github.com/Pkmmte/CircularImageView</url>
+    <copyright>Copyright (c) 2014 Pkmmte Xeleon</copyright>
+    <license>MIT License</license>
+</notice>
+<notice>
+    <name>FloatingActionButton</name>
+    <url>https://github.com/makovkastar/FloatingActionButton</url>
+    <copyright>Copyright (c) 2014 Oleksandr Melnykov</copyright>
+    <license>MIT License</license>
+</notice>
+<notice>
+    <name>SmoothProgressBar</name>
+    <url>https://github.com/castorflex/SmoothProgressBar</url>
+    <copyright>Copyright 2014 Antoine Merle</copyright>
+    <license>Apache Software License 2.0</license>
+</notice>
+<notice>
+    <name>L-Dialogs</name>
+    <url>https://github.com/lewisjdeane/L-Dialogs</url>
+</notice>
+<notice>
+    <name>Android CropImage</name>
+    <url>https://github.com/lvillani/android-cropimage</url>
+</notice>
+</notices>

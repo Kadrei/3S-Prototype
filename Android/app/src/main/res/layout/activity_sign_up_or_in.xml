@@ -1,0 +1,136 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="de.thmgames.s3.Activities.SignUpOrInActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/signintoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
+        android:id="@+id/loading_progress_linear"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:indeterminate="true"
+        app:spb_stroke_width="4dp" />
+
+    <!-- Login progress -->
+
+    <LinearLayout
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/circle_image_padding">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_username"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:baseColor="@color/md_black_1000"
+            app:floatingLabel="highlight"
+            app:maxCharacters="20"
+            app:primaryColor="@color/primary" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_password"
+            android:imeActionId="@+id/login"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:minCharacters="5"
+            app:baseColor="@color/md_black_1000"
+            app:errorColor="@color/md_red_500"
+            app:floatingLabel="highlight"
+            app:primaryColor="@color/primary"
+            app:singleLineEllipsis="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/studiengang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Studiengang (Optional)"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:baseColor="@color/md_black_1000"
+            app:floatingLabel="normal"
+            app:primaryColor="@color/primary"
+            app:singleLineEllipsis="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/fachsemester"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Fachsemester (Optional)"
+            android:inputType="number"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:baseColor="@color/md_black_1000"
+            app:floatingLabel="normal"
+            app:primaryColor="@color/primary" />
+
+        <TextView
+            android:id="@+id/geschlechtText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="2dp"
+            android:paddingStart="2dp"
+            android:paddingTop="10dp"
+            android:text="Geschlecht"
+            android:textColor="#777777"
+            android:textSize="16px" />
+
+        <Spinner
+            android:id="@+id/geschlechterSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:entries="@array/geschlechter" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="16dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/alternative"
+                style="@style/Widget.S3.Button.Borderless.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/main"
+                style="@style/Widget.S3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="@string/action_sign_in"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+

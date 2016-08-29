@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="horizontal_margin">24dp</dimen>
+    <dimen name="vertical_margin_top">16dp</dimen>
+    <dimen name="vertical_margin_bottom">12dp</dimen>
+
+    <dimen name="header_img_max_height">240dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="navigation_drawer_width">240dp</dimen>
+    <dimen name="navigation_drawer_profile_textheight">56dp</dimen>
+    <dimen name="navigation_drawer_profile_imagesize">56dp</dimen>
+    <dimen name="navigation_drawer_profile_height_all">140dp</dimen>
+    <dimen name="navigation_drawer_marginEnd">?attr/actionBarSize</dimen>
+    <dimen name="navigation_drawer_maxWidth">400dp</dimen>
+    <dimen name="status_bar_height">0dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="circle_image_size">48dp</dimen>
+    <dimen name="circle_image_padding">16dp</dimen>
+    <dimen name="circle_image_size_in_listview">24dp</dimen>
+    <dimen name="stroke_width">2dp</dimen>
+    <dimen name="fab_elevation">8dp</dimen>
+    <dimen name="headerbar_elevation">4dp</dimen>
+    <dimen name="session_detail_max_header_elevation">@dimen/headerbar_elevation</dimen>
+    <dimen name="pref_paddingTop">20dp</dimen>
+    <dimen name="fab_mini_half">32dp</dimen>
+
+    <dimen name="keyline_1">16dp</dimen>
+    <dimen name="keyline_1_minus_8dp">8dp</dimen>
+    <dimen name="keyline_2">72dp</dimen>
+    <dimen name="keyline_2_minus_16dp">56dp</dimen>
+
+    <dimen name="text_size_xsmall">11sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">20sp</dimen>
+    <dimen name="text_size_diff_large_small">6sp</dimen>
+
+    <dimen name="list_item_action_width">105dp</dimen>
+    <dimen name="list_item_action_height">90dp</dimen>
+    <dimen name="list_item_action_margin">2dp</dimen>
+
+    <dimen name="action_button_padding">10dp</dimen>
+    <dimen name="spinner_left_padding">16dp</dimen>
+    <dimen name="circle_progressbar_size">50dp</dimen>
+    <dimen name="circle_progressbar_size_mini">25dp</dimen>
+    <dimen name="top_padding">8dp</dimen>
+    <dimen name="cardmargin">8dp</dimen>
+    <dimen name="card_content_padding">16dp</dimen>
+    <dimen name="fab_mini_size">40dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="circular_progress_card_size">25dp</dimen>
+</resources>

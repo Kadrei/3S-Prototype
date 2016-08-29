@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/loadingscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/accent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/loadingIndicator"
+                android:layout_width="@dimen/circle_image_size"
+                android:layout_height="@dimen/circle_image_size"
+                android:layout_gravity="center"
+                android:maxHeight="@dimen/circle_image_size"
+                android:maxWidth="@dimen/circle_image_size"
+                android:scaleType="centerCrop"
+                android:src="@drawable/s3logoneuweb"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/inputWrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/keyline_1"
+            android:paddingRight="@dimen/keyline_1">
+
+            <TextView
+                android:id="@+id/codeInputText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <EditText
+                android:id="@+id/userInputField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/codeInputText"
+                android:layout_gravity="center"
+                android:layout_toStartOf="@+id/sendButton" />
+
+            <ImageButton
+                android:id="@+id/sendButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/codeInputText"
+                android:background="@null"
+                android:src="@android:drawable/ic_menu_send" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/loadingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/keyline_1" />
+
+        <TextView
+            android:id="@+id/progressIndicatorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/keyline_1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+</FrameLayout>

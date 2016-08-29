@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="translucent_enabled">true</bool>
+    <integer name="api_version">1</integer>
+</resources>

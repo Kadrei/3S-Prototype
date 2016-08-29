@@ -1,0 +1,153 @@
+% Template for FMI-2011 paper; to be used with:
+%          fmiconf.sty - LaTeX style file, and
+%          IEEEbib.bst - IEEE bibliography style file.
+% --------------------------------------------------------------------------
+\documentclass{article}
+\usepackage{fmiconf,amsmath,epsfig}
+\usepackage{german}
+\usepackage{url}
+\usepackage{nameref}
+\newcommand\complref[1]{\-\ref{#1}\- \textit{\nameref{#1}}}
+
+% Example definitions.
+% --------------------
+\def\x{{\mathbf x}}
+\def\L{{\cal L}}
+
+% Title.
+% ------
+\title{Konzeption und Entwicklung einer Androidapp f"ur das Serious Alternate Reality Game "'Secret Science Society"'}
+\name{Benedikt Kusemann}
+\address{Technische Hochschule Mittelhessen\\Wiesenstra"se 14\\ 35390 Gie"sen}
+
+\begin{document}
+%
+\maketitle
+%
+\begin{abstract}
+In dieser Arbeit wird die Umsetzung des Konzepts vom \textit{mobilen ortsbasierendem Serious Game} "'Secret Science Society"'\footnote{Im weiteren Verlauf des Papers kurz 3S genannt} erl"autert. 3S ist ein Spiel, welches die Orientierung am Studienort vereinfachen soll und richtet sich vor allem an Erstsemesterstudenten. Um die Applikation an die Institution anpassen zu k"onnen, wurde dabei vor allem auf die Flexibilit"at des entwickelten Systems, in Form von ver"anderbarer Spielwelt und unterschiedlichen Aufgabenanforderungen, Wert gelegt. So ist das in dieser Arbeit entwickelte Appkonzept zwar auf das 3S-Spielprinzip eingeschr"ankt aber die Spielwelt und die Aufgaben der Spieler sind anpassbar auf die Gegebenheiten und Einschr"ankungen der spielleitenden Institution, welche die Applikation anbietet.
+\end{abstract}
+%
+\begin{keywords}
+Serious Alternate Reality Game, Gamification, App Development, Parse, Beacon, 3S, University
+\end{keywords}
+%
+
+\section{Einf"uhrung}
+\label{sec:intro}
+
+\subsection{Motivation}
+\label{subsec:Motivation}
+Um sich schnell auf die fachlichen Themen des Studiums konzentrieren zu k"onnen, sollte sich ein Student m"oglichst schnell am Studienort zurechtfinden. 
+F"ur Erstsemesterstudierende ist es immer schwierig sich in der Hochschule zu orientieren, deshalb werden meist spezielle F"uhrungen durchgef"uhrt, in denen die Erstsemesterstudierenden zu relevanten Orten gef"uhrt werden. Oft kann jedoch nicht jeder relevante Ort vorgestellt werden oder er bleibt nicht im Ged"achtnis des Studenten haften, sodass Studenten sich oft trotzdem nicht orientieren k"onnen und daher nicht wie gew"unscht am Hochschulangebot (z.B. Sportkurse, Auslandsaufenthalte) teilnehmen k"onnen.
+Aus diesem Grund entwickelte Games@THM das Konzept zu 3S. 
+
+\subsection{3S}
+\label{subsec:drei_s}
+3S ist ein \textit{Serious Alternate Reality Game}, welches dem Spieler die Orientierung an der Hochschule erleichtern soll. Zus"atzlich soll es die aktive Teilnahme am Studium und die Kommunikation mit weiteren Studenten f"ordern.
+
+3S teilt die Spieler in drei Fraktionen auf, welche gegeneinander antreten um spezielle Stationen (z.B. die Hochschulbibliothek) auf dem Gel"ande der Hochschule (und m"oglicherweise au"serhalb) zu erobern und zu verteidigen. Um Stationen angreifen (oder verteidigen) zu k"onnen, muss der Spieler die Spielw"ahrung (Energie) aufsammeln. Diese Energie kann dann vom Spieler auf die Station "ubertragen werden, um diese aufzuladen (wenn er zur Fraktion geh"ort, welche momentan die Station h"alt) oder die Station zu schw"achen (oder sogar selbst f"ur seine Fraktion zu erobern).
+
+Die Spielw"ahrung sammelt der Spieler durch das Erf"ullen von Aufgaben. Aufgaben k"onnen verschiedene Bereiche des Hochschullebens abdecken. So k"onnen Spieler f"ur das Ausleihen von B"uchern in der Bibliothek, das Besuchen angebotener Sportkurse oder Vorlesungen und vielem mehr mit Energie oder sogar Punkten belohnt werden.
+
+Neben diesen Elementen welche das Spiel mit der Realit"at der Hochschule verbinden, soll der Spieler "uber verschiedene Storyelemente, welche er durch das Erledigen von Aufgaben freischalten kann, in die Spielwelt von 3S eintauchen k"onnen. Dies soll den Spielspa"s erh"ohen und dem Spieler eine langfristige Motivation bieten.
+
+3S unterst"utzt also den Spieler bei der Bildung von Ortskenntnissen und der generellen Orientierung im Studium "uber standortbasiertes Spielen. Es verbindet somit den Spielreiz mit den Interessen der Studierenden. Beratungsangebote und andere Einrichtungen der Hochschule, die den Studierenden sonst unbekannt w"aren, werden Ihnen auf diese Art n"aher gebracht.
+
+\subsection{Aufgabenstellung}
+\label{subsec:aufgabenstellung}
+Neben der Umsetzung der in \ref{subsec:drei_s} bereits erw"ahnten Funktionalit"aten\footnote{Gemeint sind hier: Interaktion mit Stationen, Erledigung von Aufgaben und das Erleben einer Geschichte} ist vor allem die Anpassbarkeit der App ein wichtiger Bestandteil der Planung und Implementierung. So soll die App nicht nur auf festen Daten basieren, welche in die App \textit{eingepr"agt} werden, sondern vielmehr von au"sen mit m"oglichst wenig Programmieraufwand konfiguriert werden k"onnen. Denkbare Konfigurationsm"oglichkeiten sind hier neben verschiedenen Standorten auch unterschiedliche Arten von Aufgaben, neue Fraktionen oder eine ver"anderte Spielwelt. All diese Elemente sollen erweiterbar oder sogar g"anzlich ver"anderbar sein.
+
+Zur besseren Motivation k"onnen die Spieler zudem jederzeit Informationen zum eigenen Abschneiden im Vergleich zu anderen Spielern und Fraktionen erhalten. Trotzdem soll auf Datenschutz geachtet werden, um Missbrauch der gesammelten Daten zu vermeiden.
+
+Da das Spiel neben der Mobilit"at des Spielers (und des Spielmediums) auch eine dauerhafte Internetverbindung erfordert, sind Smartphones ein geeignetes Spielmedium. 
+
+Zusammenfassend soll die Applikation also das Spielprinzip von 3S unterst"utzen, aber Anpassungsm"oglichkeiten bieten. Dies muss bereits bei der Planung ber"ucksichtigt werden, um eine m"oglichst flexible App entwickeln zu k"onnen. Aus diesem Grund besch"aftigt sich dieses Paper mit der technischen Konzeption und Entwicklung einer mobilen App zur Umsetzung des 3S Konzepts und der Anpassbarkeit der einzelnen Komponenten.
+
+\section{Verwandte Arbeiten}
+\label{sec:verw_arbeiten}
+Popul"arstes Beispiel f"ur ein \textit{Alternate Reality Game} ist das von Niantic Lab\footnote{\url{http://www.nianticproject.com}} entwickelte "'Ingress"'. "Ahnlich wie in 3S geh"oren Spieler einer von zwei Fraktionen an und sammeln f"ur diese Energie (im Spiel als "'Exotic Matter"' bezeichnet), indem Sie durch die reale Welt laufen, w"ahrend die Applikation ihre Bewegungen aufnimmt. Energie wird wiederrum dazu verwendet, um Portale f"ur die eigene Fraktion anzugreifen, zu erobern oder zu verteidigen. Zwar "ahnelt 3S dem Konzept von Ingress sehr, jedoch fehlt Ingress der \textit{Serious-Faktor}, also die M"oglichkeit mit dem Spiel Neues zu erlernen.
+
+Im Gegensatz dazu bieten die verschiedene mobilen Apps von Six to Start\footnote{\url{http://www.sixtostart.com/}} rund um das Spiel "'Zombies, Run!"'\footnote{\url{https://www.zombiesrungame.com/}} neben dem Eintauchen in die Spielwelt eine F"orderung der eigenen Sportbildung, indem sie den Spieler "uber ein H"orerlebnis glauben l"asst, von Zombies verfolgt zu werden und so zum Laufen anspornt. 3S grenzt sich jedoch durch sein Spielprinzip und seinem angestrebten Zweck deutlich von diesen Apps ab.
+
+Dem Zweck von 3S kam das Spiel "'SCVNGR"' am n"achsten. SCVNGR war ein Spiel, welches Spielern erm"oglichte durch das Erf"ullen von \textit{Challenges} Punkte, Achievements in Form von Badges, oder reale Produktgeschenke/-Rabatte bei lokalen Unternehmen zu erhalten. Die Plattform wurde vor allem von amerikanischen Universit"aten und deren Bibliotheken verwendet\cite{mcmunn2013if}, um neue Studenten zu motivieren die "Ortlichkeiten kennen zu lernen. Obwohl im Februar 2011 noch bekannt gegeben wurde, dass SCVNGR "uber eine Millionen Nutzer habe, wurde das Projekt im M"arz 2011 eingestellt und alle offiziellen Informationen wurden aus dem Internet genommen. Auch wenn 3S ein "ahnliches Ziel verfolgt, ist es durch die Verkn"upfung mit einer Storyline und der somit entstehenden \textit{alternativen Realit"at} sowie einiger Spielmechaniken (z.B. angreifen und erobern von Stationen) klar von SCVNGR abzugrenzen.
+
+Im Bereich des "'Serious Location Based Mobile Gaming"' findet man verschiedene Spiele mit unterschiedlichen Zielstellungen, welche sich durch diese klar von 3S absetzen. So entwickelte Sondre Johan Mannsverk in seiner Masterarbeit "'Flooded - A Location-Based Game for Promoting Citizens' Flood Preparedness"'\cite{mannsverk2013flooded} ein Serious Location Based Game f"ur mobile Endger"ate, um Spieler mit dem Risikofaktor "Uberflutung vertraut zu machen. Ein weiteres Beispiel ist "'Frequency 1550"'\cite{huizenga2009mobile}, ein Spiel welches die Spieler in das Leben in Amsterdam im Jahr 1550 eintauchen lies.
+
+Als Grundlage aller \textit{Location Based Game}s sei hier noch Geocaching erw"ahnt, welches unterschiedliche Kompetenzen von Pflanzenkunde (Floracaching) bis Mathematik (R"atselcaches) f"ordern kann, abh"angig von der Art der Geocaches.
+
+Insgesamt adaptiert 3S zwar Konzepte und Ideen aus unterschiedlichen Spielen, aber durch die Vermischung von Wissensvermittlung und Spielinhalten ist eine deutliche Abgrenzung zu genannten anderen Spielen sichtbar.
+
+\section{Technische Vorraussetzungen}
+\label{subsec:technische_vorraussetzungen}
+
+\subsection{Parse.com}
+\label{subsubsec:parse}
+3S setzt auf das "'Backend as a Service"'(BaaS)-System von Parse\footnote{\url{parse.com}, wurde im April 2013 von Facebook gekauft}, welches es erm"oglicht schnell ein Webbackend f"ur Applikationen aufzusetzen\footnote{Neben Bibliotheken f"ur Android, Windows und iOS stehen auch Bibliotheken f"ur weitere Programmiersprachen zur Verf"ugung sowie eine REST-API}. Mit den zur Verf"ugung gestellten Funktionen der Clientbibliotheken ist es m"oglich schnell Datenabfragen (z.b.: Suchqueries) auf dem Onlinebackend auszuf"uhren. Auch das lokale Abspeichern der Ergebnisse wird hier unterst"utzt. Weitere oft ben"otigte Funktionen wie User-/Rechte- \& Sessionmanagment werden durch spezielle Datenstrukturen und weitere API-Schnittstellen unterst"utzt. Auch f"ur eigene Backendskripte bietet Parse Schnittstellen. Dabei werden im Hintergrund alle Daten bei Parse in JSON-"ahnliche Strukturen abgespeichert und verwaltet. Dadurch ist das System sehr flexibel und ohne gro"sen Aufwand um weitere Daten erweiterbar. Da Parse somit die Entwicklung eines Backends, sowie der ben"otigten Appanbindung und zudem das Aufsetzen eines Backends f"ur weitere Spielinstanzen vereinfacht, wird dieses System in 3S verwendet.
+
+\subsubsection{Beacon}
+\label{subsubsec:beacon}
+Apple f"uhrte im Jahre 2013 den propriet"aren Standard "'iBeacon"' ein um die Positionserkennung innerhalb von Geb"auden zu vereinfachen. Als Alternative zu dem propriet"aren Standard wurde der offene Standard "'AltBeacon"' von RadiusNetworks entwickelt. Um diesen Standard in Android nutzen zu k"onnen wird die, ebenfalls von Radius Networks zur Verf"ugung gestellte, Bibliothek \texttt{Android Beacon Library}\footnote{\url{https://github.com/AltBeacon/android-beacon-library}} verwendet.
+
+Da die Beacon-Technologie auf BLE\footnote{Bluetooth Low Energy} basiert, wird es jedoch nur von Ger"aten unterst"utzt welche selbst BLE unterst"utzen. Trotz dieser Einschr"ankung bieten Beacons einen einfachen Weg zur Positionsbestimmung innerhalb von Geb"auden und wird daher von 3S zu diesem Zweck verwendet.
+
+\section{Umsetzung}
+\label{sec:umsetzung}
+
+\subsection{Spielkarte \& Stationen}
+\label{subsec:spielkarte}
+Um sich sowohl in der realen Welt als auch in der Spielwelt zurechtfinden zu k"onnen, ben"otigt der Spieler eine Karte an der er sich orientieren kann. Damit  Spieler im Verlauf mit Orten in der realen Welt bekannt gemacht werden k"onnen, ist es sinnvoll die Spielwelt der realen Welt nachzuempfinden.
+
+Aus diesem Grund wird Google Maps als Kartengrundlage verwendet. Spielrelevante Geb"aude und Stationen werden aus dem Parse-Backend geladen und automatisch auf der Karte angezeigt. Dies f"uhrt dazu, dass Indoor-Kartenmaterial angezeigt werden kann, um Spielern eine Orientierung innerhalb der Geb"auden zu bieten. 
+
+Der Spieler kann jederzeit auf einen Marker klicken, um Informationen "uber die Station zu erhalten. Alternativ erh"alt der Spieler die M"oglichkeit mit der Station zu interagieren, falls die Konfiguration der Station dies erlaubt und der Spieler sich in der N"ahe befindet. Um die N"ahe einer Station zu bestimmen, muss an dieser ein (im Backend mit der Station verbundener) Beacon aktiv sein und der Nutzer das Bluetooth seines Endger"ates aktiviert haben. So wird der Nutzer bei offener App "uber ein kleinen Button am unteren linken Bildschirmrand informiert, welcher erscheint wenn sich Stationen in der N"ahe befinden \footnote{Siehe auch Anhang f"ur Screenshots}.
+
+\subsection{Aufgaben im Spiel}
+\label{subsec:questsystem}
+Das erste Konzept zu 3S sah vor, User beim Besuch einiger spezieller Stationen Energie gutzuschreiben. Diese Energie konnte dann an den Eroberungsstationen ausgegeben werden. Da dies aber ein essenzieller Bestandteil des Spiels werden sollte und ein reiner Besuch ohne weitere Aufgaben wenig abwechslungsreich und daher auch demotivierend sein k"onne wurde die M"oglichkeit in Betracht gezogen f"ur andere Aktionen (z.B. Ausleihen von B"uchern in der Bibliothek) auch Energie zu vergeben. Das entwickelte System soll dabei m"oglichst viele verschiedene Aufgabenvariationen zulassen.
+
+Um beide Varianten in einem System zu verschmelzen, wurde ein, auf bekannten Aufgabensystemen basierendes, Konzept entwickelt, welches es erm"oglicht verschiedene Aufgaben in einer Aufgabengruppe, sog. \textit{Quest}s zu b"undeln. Eine Quest besteht aus kleineren \textit{Job}s, welche nacheinander erledigt werden m"ussen. Jobs k"onnen dabei unterschiedliche Herausforderungen im Universit"atsalltag darstellen und ben"otigen unterschiedliche \texttt{Parameter} zur Beendigung. So k"onnen Parameter wie Datum \& Uhrzeit, naheliegende Stationen, Usereingaben (z.B.: Codes), Barcodes \& QR-Codes, uvm. f"ur die Beendigung eines Jobs erforderlich sein. Ben"otigte Parameter lassen sich f"ur jeden Job einzeln konfigurieren, so ist es z.B. denkbar, dass f"ur die Beendigung des Jobs A Spieler zu einer bestimmten Uhrzeit in der N"ahe einer naheliegenden Station ein oder mehrere Codes eingeben m"ussen und f"ur die Beendigung des darauf folgenden Jobs allein weitere Codeeingaben notwendig sind. 
+
+Jeder Quest ist min. ein Job zugeordnet und jeder Job besitzt eine Liste von Parametern (z.B.: \textit{NearLocation} oder \textit{timestamp}), welche erf"ullt werden m"ussen, sowie einen Verweis auf eine im Parse-Backend hinterlegte Funktion, welche von der App die ben"otigten Werte erh"alt und diese validiert, sowie weitere spielrelevanten Aktionen durchf"uhrt. Mit diesem System ist es auch m"oglich verschiedene Job-Sonderf"alle darzustellen. So k"onnen Parameter des Jobs als optional gekennzeichnet sein oder zwischen Parametern Abh"angigkeiten wie Und/Oder-Verkn"upfungen dargestellt werden. Informationen "uber die Validierungsart k"onnen dabei direkt als Eigenschaft des Parameters im Parse-Backend gespeichert und von der Funktion ausgelesen werden. Ein weiterer Vorteil der Auslagerung der Jobvalidierung ist die Verwendbarkeit der Jobs f"ur "altere Spielversionen, welche von Nutzern nicht aktualisiert wurden und somit nicht die n"otige Funktionalit"at f"ur neuartige Jobabschlussvalidationen besitzen w"urden. Da diese aber im Backend geschieht, reicht es v"ollig aus wenn die App alle notwendigen Parametertypen kennt und auslesen kann. F"ur F"alle, in denen Parameter in alten Appversionen nicht verf"ugbar sind, besitzt jede Quest zus"atzlich eine Eigenschaft \texttt{minAPI}, welche die Sichtbarkeit auf kompatible Appversionen beschr"ankt. Alternativ kann die Javascriptfunktion die API-Version des Aufrufers "uberpr"ufen und so die Jobanforderungen anpassen. So kann durch die Auslagerung, das Jobsystem um weitere Aufgaben erweitert werden ohne meist Anpassungen in der App vorzunehmen. Anpassungen sind daher nur notwendig wenn neue Parametertypen hinzukommen. "Uber die \textit{Response} der Jobvalidierungsfunktion ist es nun m"oglich verschiedene Aktionen in der App ausf"uhren zu lassen. So ist neben der Anzeige von simplen Textausgaben auch die Anzeige von Storyelementen\footnote{Informationen zur Ergebnisanzeige k"onnen dem Job im Parsebackend angeh"angt und so von der Funktion ausgelesen werden} m"oglich.
+
+\subsection{Storyelemente}
+\label{subsec:storyelemente}
+Um den Nutzer besser in die Hintergrundgeschichte der 3S-Welt eintauchen lassen zu k"onnen, werden w"ahrend des Spielens Storyelemente offenbart. Damit die Welt durch eine andere ersetzt werden kann, darf der Inhalt der Geschichte nicht fest in die App integriert werden. Deshalb und zur besseren Anpassung der Gestaltung der Storyelemente, werden diese als Webdokumente im Internet gehalten. Diese lassen sich leicht durch andere Dokumente austauschen, ohne dabei die App ver"andern zu m"ussen. Zur weiteren Konfigurierbarkeit enth"alt jedes Storyelement, "ahnlich wie Jobs, eine Liste an Parametern, welche als \texttt{POST}-Parameter dem Dokumentenaufruf angehangen werden. So kann das Dokument je nach aufrufendem Spieler einen unterschiedlichen Inhalt darstellen. Dies erm"oglicht also eine Anpassung der Darstellung und Information an die vorhandenen Parameter, um die Storyelemente auf den aufrufenden Spieler anzupassen. Denkbar ist hier z.B. eine unterschiedliche Farbgebung je nach Fraktion des Spielers. Zus"atzlich zur Darstellung von Storyelementen bei der Beendigung (oder dem Starten) von Quests besitzt auch jede Station ein solches Storyelement (sowie ein weiteres storyunabh"angiges Informationselement, z.B. f"ur "Offnungszeiten), welches die Station mit der Geschichte der Welt verkn"upft und so den Spieler weiter in diese eintauchen l"asst.
+
+\subsection{Datenschutz}
+\label{subsec:Datenschutz}
+Ein Punkt, welcher heutzutage immer mehr Aufmerksamkeit von der "Offenlichkeit erh"alt, ist der Datenschutz. Bei einer App, welche f"ur das Besuchen von speziellen Orten zu speziellen Zeiten (also m"oglicherweise auch Vorlesungen) Vorteile (in diesem Fall Punkte \& Energie) vergibt, muss umso mehr darauf geachtet werden, dass die Daten, welche von der App gesammelt werden, m"oglichst keine R"uckschl"usse auf die wahre Identit"at eines Nutzers zul"asst. Ein wichtiger Schritt hierbei ist es, keine Verkn"upfung zwischen eindeutig zuordnungsbaren Accounts des Spielers (private E-Mail, Universit"atsmail, Matrikelnummer, etc.) und dem Spielaccount verpflichtend zu fordern. Aus diesem Grund reicht f"ur die Registrierung/Login ein eindeutiger Username und ein Passwort aus. Da dadurch aber die Funktionalit"at einer "'Passwort vergessen"'-Funktion wegf"allt ist f"ur eine n"achste Version bereits ein Speichern und "Uberpr"ufen der E-Mail als Hashwert eingeplant.
+
+Auch beim Abspeichern der Questinformationen werden m"oglichst wenige Daten gesammelt. Einzig der aktuelle Status von Spielern in einer Quest wird abgespeichert, aus diesem l"asst sich jedoch nicht genau herauslesen, zu welchem Zeitpunkt ein spezieller Job beendet wurde.
+%Abschluss des Methodik Kapitels finden
+\section{Fazit \& Ausblick}
+\label{sec:fazit}
+Zusammenfassend deckt das entwickelte Konzept gro"se Teile der Anforderungen des 3S-Spiels ab und ist zudem auf andere Spielwelten anpassbar. So entsprechen wichtige Spielelemente, wie das Questsystem und das Stationssystem, dem 3S-Konzept k"onnen aber um weitere Anforderungen (z.B. verschiedene Jobaufgaben, andere Stationen) erweitert werden. Auch das Storysystem ist durch die Verwendung von Webdokumenten sehr flexibel und kann dementsprechend leicht inhaltlich angepasst werden. Damit sind die Grundvorraussetzungen f"ur einen Einsatz auch in anderen Hochschulen und weiteren Institutionen geschaffen.
+
+Auch wenn die hier vorgestellten Konzepte zum Gro"steil bereits implementiert wurden, sind die wichtigsten Faktoren bei einem Spiel immer die Spieler und deren Akzeptanz des Systems. Aus diesem Grund m"ussen vor allem das Questsystem, das User Interface und die Einsteigerfreundlichkeit in einem oder mehreren Testl"aufen unter realen Bedingungen evaluiert und dem Ergebniss entsprechend angepasst werden.
+
+Da momentan nur eine Androidversion entwickelt wurde k"onnen Ergebnisse aus den Testl"aufen auch direkt in die Weiterentwicklung der Android und Neuentwicklung einer iOS-Version flie"sen. Vor allem eine iOS-Version des Spiels ist sinnvoll, damit m"oglichst viele Studenten von diesem Spiel profitieren k"onnen.
+
+Die M"oglichkeit das Spiel auf verschiedene Weisen anzupassen ist momentan vor allem im Questsystem und bei den Storyelementen sichtbar. Um die Spielweltatmosph"are in der App zu unterst"utzen, k"onnte es erm"oglicht werden verschiedene UI-Elemente "uber das Backend zu gestalten.
+
+Um die Spieler mehr zu motivieren, k"onnte neben dem bereits existierenden Ranglistensystem ein \textit{Achievement}system, sowie ein Levelsystem implementiert werden. Dies k"onnte auch f"ur Spieler, welche keine allzu gro"se Chance auf einen Ranglistenplatz besitzen, eine Langzeitmotivation bieten.
+
+Abschlie"send kann also gesagt werden, dass es sich bei der entwickelten Applikation wohl eher um eine erste Testiteration handelt, als um ein fertiges Produkt. 
+
+%HERE COMES THE REFERENCES
+
+% References should be produced using the bibtex program from suitable
+% BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
+% style file from IEEE produces unsorted bibliography list.
+% -------------------------------------------------------------------------
+
+% TODO: Kommentiere aus
+\bibliographystyle{IEEEbib}
+\bibliography{refs}
+
+%\include{anhang/Anhang1}
+
+%\appendix
+%\section{Anhang}
+
+\end{document}

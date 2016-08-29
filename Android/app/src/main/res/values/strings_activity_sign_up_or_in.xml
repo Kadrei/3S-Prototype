@@ -1,0 +1,20 @@
+<resources>
+        <string name="title_activity_sign_up_or_in">Registrierung/Login</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Passwort</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_sign_in_short">Login</string>
+
+    <string name="error_invalid_email">Diese E-Mail Adresse ist ungültig!</string>
+    <string name="error_invalid_password">Das Passwort ist ungültig! (Min. 5 Zeichen)</string>
+    <string name="error_incorrect_password">Das Passwort ist ungültig!</string>
+    <string name="error_field_required">Das Feld wird benötigt. (Max. 20 Zeichen)</string>
+
+    <string name="login">Login</string>
+    <string name="register">Registrierung</string>
+    <string name="do_login">Einloggen</string>
+    <string name="to_registration">Zur Registrierung</string>
+    <string name="to_login">Zum Login</string>
+</resources>

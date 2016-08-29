@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/settings">
+        <CheckBoxPreference
+            android:key="@string/key_push_sp"
+            android:defaultValue="false"
+            android:title="@string/push"
+            android:summary="@string/push_summary" />
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/about">
+        <PreferenceScreen
+            android:summary="@string/versionname"
+            android:title="@string/version_now"
+            android:selectable="false" />
+        <PreferenceScreen
+            android:title="@string/developer_name"
+            android:selectable="false"
+            android:summary="@string/developer"
+            android:key="@string/key_developer_pref" />
+        <PreferenceScreen
+            android:title="@string/feedback"
+            android:key="@string/key_feedback_prefs"
+            android:summary="@string/send_feedback" />
+        <PreferenceScreen
+            android:title="@string/open_source_title"
+            android:summary="@string/open_source_summary"
+            android:key="@string/key_thirdparties_prefs" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/cardmargin"
+    android:clickable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:focusableInTouchMode="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/cardmargin"
+        >
+
+        <fr.castorflex.android.circularprogressbar.CircularProgressBar
+            android:id="@+id/cardLoadProgress"
+            android:layout_width="@dimen/circular_progress_card_size"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/cardmargin"
+            android:paddingStart="@dimen/cardmargin"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:indeterminate="true" />
+
+
+            <ImageButton
+                android:id="@+id/optionbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="top|end"
+                android:layout_margin="4dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_settings"
+                android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/questwrapper"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_toStartOf="@+id/optionbutton"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <com.pkmmte.view.CircularImageView
+                android:id="@+id/questimage"
+                android:layout_width="@dimen/circle_image_size"
+                android:layout_height="@dimen/circle_image_size"
+                android:layout_gravity="start|center_vertical"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_quest_mini"
+                app:border_color="#EEEEEE"
+                app:border_width="1dp"
+                app:shadow="true" />
+
+            <TextView
+                android:id="@+id/questtitle"
+                style="@style/TextHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/keyline_1"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/questjobwrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/questwrapper"
+            android:layout_below="@id/questwrapper"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/keyline_1"
+            android:layout_marginEnd="@dimen/keyline_1"
+            android:layout_margin="@dimen/cardmargin"
+            android:paddingStart="@dimen/cardmargin"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:clickable="false"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

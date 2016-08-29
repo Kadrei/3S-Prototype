@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.pkmmte.view.CircularImageView
+        android:id="@+id/jobimage"
+        android:layout_width="@dimen/circle_image_size_in_listview"
+        android:layout_height="@dimen/circle_image_size_in_listview"
+        android:src="@drawable/placeholder_job_mini"
+        app:border_color="#EEEEEE"
+        app:border_width="1dp"
+        app:shadow="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/keyline_1_minus_8dp"
+        android:layout_toStartOf="@+id/jobdonebox"
+        android:layout_toEndOf="@+id/jobimage">
+
+        <TextView
+            android:id="@+id/jobtitle"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:id="@+id/jobdesc" />
+    </LinearLayout>
+
+
+    <CheckBox
+        android:id="@+id/jobdonebox"
+        android:layout_width="@dimen/circle_progressbar_size_mini"
+        android:layout_height="@dimen/circle_progressbar_size_mini"
+        android:layout_gravity="end"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:visibility="visible"/>
+</RelativeLayout>

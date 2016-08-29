@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/targetView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/greyBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:alpha="0.5"
+        android:background="#999999AA"/>
+
+    <ImageView
+        android:id="@+id/loadingView"
+        android:layout_width="@dimen/circle_image_size"
+        android:layout_height="@dimen/circle_image_size"
+        android:maxHeight="@dimen/circle_image_size"
+        android:maxWidth="@dimen/circle_image_size"
+        android:scaleType="centerCrop"
+        android:src="@drawable/s3logoneuweb"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center" />
+
+</merge>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <de.thmgames.s3.Views.Widgets.LoadingImageView
+            android:id="@+id/questImageHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:id="@+id/questInfoWrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questImageHeader"
+            android:layout_centerVertical="true"
+            android:background="@drawable/tabbackground"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
+                android:id="@+id/loading_progress_linear"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:indeterminate="true"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/questName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@string/font_fontFamily_medium"
+                android:lineSpacingMultiplier="1.1"
+                android:maxLines="4"
+                android:paddingEnd="@dimen/keyline_1"
+                android:paddingStart="@dimen/keyline_2_minus_16dp"
+                android:paddingTop="@dimen/keyline_1_minus_8dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/body_text_1_inverse"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/questDesc"
+                style="@style/TextHeaderSub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingEnd="@dimen/keyline_1"
+                android:paddingStart="@dimen/keyline_2_minus_16dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/body_text_2_inverse"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <include
+            layout="@layout/tabbed_pager_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questInfoWrapper" />
+
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/actionButton"
+            style="@style/Widget.S3.FloatingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/questInfoWrapper"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginBottom="-26dp"
+            android:layout_marginEnd="@dimen/keyline_1_minus_8dp"
+            android:layout_marginStart="@dimen/keyline_2"
+            android:src="@drawable/ic_done_white_24dp"
+            fab:fab_colorNormal="@color/accent"
+            fab:fab_colorPressed="@color/accent" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+</FrameLayout>

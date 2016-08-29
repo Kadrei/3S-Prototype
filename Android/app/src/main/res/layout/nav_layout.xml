@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="@dimen/navigation_drawer_marginEnd"
+    android:gravity="start"
+    android:background="@color/white">
+
+    <include layout="@layout/profile_short_view"
+        android:id="@+id/profileview"
+        android:paddingTop="@dimen/status_bar_height"
+         />
+
+    <ListView
+        android:id="@+id/list_slidermenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:layout_marginTop="@dimen/top_padding"
+        android:dividerHeight="0dp"/>
+
+</LinearLayout>
